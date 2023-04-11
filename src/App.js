@@ -1,7 +1,7 @@
 import React from "react";
 import {Navigate, Route, Routes} from "react-router-dom";
 import StartPage from "./pages/start_page/StartPage";
-import MainRegistration from "./pages/main_registration/MainRegistration";
+import Registration from "./pages/registration/Registration";
 import Login from "./pages/login/Login";
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
 
             <Route path="/" element={<StartPage/>}/>
 
-            <Route path="/MainRegistration" element={<MainRegistration/>} />
+            <Route path="/Registration" element={<Registration/>} />
 
             <Route path="/login" element={<Login/>} />
 

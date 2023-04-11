@@ -7,8 +7,6 @@ import BottomPanel from "../../components/UI/bottom_panel/BottomPanel";
 
 const StartPage = () => {
 
-    //const navigate = useNavigate();
-
 
     return (
         <div>
