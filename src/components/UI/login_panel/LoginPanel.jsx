@@ -13,12 +13,12 @@ const LoginPanel = () => {
     const PostLog = () => {
 
         axios
-            .post(`//localhost:3100/user/login/`, {
+            .post(`http://127.0.0.1:8000/user/login/`, {
                 username: userName,
                 password: password,
             })
             .then((response) => {
-                console.log(response.data);
+                console.log(response);
             })
             .catch((e) =>{
                 console.log(e);
