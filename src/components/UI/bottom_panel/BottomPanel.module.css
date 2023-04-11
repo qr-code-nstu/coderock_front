@@ -1,0 +1,9 @@
+.panel{
+    position:fixed;
+    bottom:0;
+    height: 50px;
+    text-align:center;
+    background:#78866B;
+    color:#FFFFFF;
+    width:100%;
+}
