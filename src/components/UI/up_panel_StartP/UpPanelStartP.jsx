@@ -1,8 +1,8 @@
 import React from 'react';
-import Styles from './UpPanel.module.css'
+import Styles from './UpPanelStartP.module.css'
 import ButtonLogin from "../button_login/ButtonLogin";
 
-const UpPanel = () => {
+const UpPanelStartP = () => {
     return (
         <div className={Styles.panel}>
             <ButtonLogin/>
@@ -10,4 +10,4 @@ const UpPanel = () => {
     );
 };
 
-export default UpPanel;
+export default UpPanelStartP;

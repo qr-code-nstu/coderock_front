@@ -1,22 +1,18 @@
 import React from 'react';
-//import {useNavigate} from 'react-router-dom'
 import UpPanelStartP from "../../components/UI/up_panel_StartP/UpPanelStartP";
 import BottomPanel from "../../components/UI/bottom_panel/BottomPanel";
+import LoginPanel from "../../components/UI/login_panel/LoginPanel";
 
-
-
-const StartPage = () => {
-
-    //const navigate = useNavigate();
+const Login = () => {
 
 
     return (
         <div>
             <UpPanelStartP/>
-            <div></div>
+            <LoginPanel/>
             <BottomPanel/>
         </div>
     );
 };
 
-export default StartPage;
+export default Login;
