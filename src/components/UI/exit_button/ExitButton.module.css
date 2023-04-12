@@ -1,0 +1,27 @@
+.button{
+
+    margin-top: 3.9375rem;
+
+    width: 2.88rem;
+    height: 2rem;
+
+
+    background: rgba(120, 134, 107, 0.8);
+    border: 1px solid #A7A5A5;
+    border-radius: 10px;
+
+    @import url("static/fonts/Montserrat/fonts/webfonts/Montserrat.css");
+
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}

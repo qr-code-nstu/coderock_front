@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import Styles from './LoginPanel.module.css'
 import {useNavigate} from "react-router-dom";
 import axios from "axios";
@@ -20,7 +20,12 @@ const LoginPanel = () => {
                 client: client,
             })
             .then((response) => {
-                console.log(response);
+                if(response.data.client === false || response.data.executor === false) {
+                    navigate('/registration/additional-information')
+                }
+                else {
+
+                }
             })
             .catch((e) =>{
                 console.log(e);
@@ -58,6 +63,7 @@ const LoginPanel = () => {
             <div className={Styles.text2}>
                 У вас нет аккаунта на WorkLinner?
             </div>
+
             <button className={Styles.create} onClick={() => {navigate('/registration')}}>
                 Создать аккаунт
             </button>
