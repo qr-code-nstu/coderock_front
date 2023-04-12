@@ -1,7 +1,8 @@
 .panel{
     width: 100%;
     height: 80px;
-    border-bottom: 3px solid #78866B;
+    border-bottom: 3px solid #ffffff;
     position: relative;
+    background: #78866B;
 
 }

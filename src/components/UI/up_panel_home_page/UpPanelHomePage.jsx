@@ -3,17 +3,17 @@ import Styles from "./UpPanelHomePage.module.css";
 import logoClient from '../../../Image/Logo/Polzovatel_-_zeleny.svg';
 import logoWorkLinner from '../../../Image/Logo/Logotip_-_zedeny.svg';
 
-const UpPanelHomePage = () => {
+const UpPanelHomePage = ({setPage}) => {
 
     return (
         <div className={Styles.panel}>
             <img className={Styles.logoWorkLinner} src={logoWorkLinner}/>
 
-            <button className={Styles.buttonMain}>
+            <button className={Styles.buttonMain} onClick={() => {setPage(1)}}>
                 Главная
             </button>
 
-            <button className={Styles.buttonStock}>
+            <button className={Styles.buttonStock} onClick={() => {setPage(0)}}>
                 Биржа
             </button>
 
