@@ -1,11 +1,12 @@
 import React from 'react';
-import Styles from "./ClientStock.module.css";
+import Styles from "../client_stock/ClientStock.module.css";
 
-const ClientStock = () => {
+const ExecutorStock = () => {
     return (
         <div>
+
             <h3 className={Styles.orders}>
-                Список исполнителей
+                Список действительных заказов
             </h3>
             <h3 className={Styles.categories}>
                 Категории заказов
@@ -15,4 +16,4 @@ const ClientStock = () => {
     );
 };
 
-export default ClientStock;
+export default ExecutorStock;
