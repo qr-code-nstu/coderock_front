@@ -2,8 +2,11 @@ import React, {useEffect, useState} from 'react';
 import Styles from './LoginPanel.module.css'
 import {useNavigate} from "react-router-dom";
 import axios from "axios";
+import {useCookies} from "react-cookie";
 
 const LoginPanel = () => {
+
+    const [cookies, setCookie, removeCookie] = useCookies(['token']);
 
     const navigate = useNavigate();
 
@@ -22,6 +25,8 @@ const LoginPanel = () => {
             .then((response) => {
                 if(response.data.client === false || response.data.executor === false) {
                     navigate('/registration/additional-information')
+                    console.log(response.data)
+                    setCookie('token', response.data.token, { path: '/' })
                 }
                 else {
 

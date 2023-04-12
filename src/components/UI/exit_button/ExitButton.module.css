@@ -1,9 +1,12 @@
 .button{
 
-    margin-top: 3.9375rem;
+    position: relative;
+    top: 2.5rem;
+    left: 85rem;
 
-    width: 2.88rem;
-    height: 2rem;
+
+    width: 7.94rem;
+    height: 3rem;
 
 
     background: rgba(120, 134, 107, 0.8);

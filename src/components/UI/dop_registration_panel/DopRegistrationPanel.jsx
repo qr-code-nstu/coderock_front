@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import Styles from "./DopRegistrationPanel.module.css";
 import axios from "axios";
 import {useNavigate} from "react-router-dom";
+import {useCookies} from "react-cookie";
 
 const DopRegistrationPanel = () => {
     const [Name, setName] = useState()
@@ -11,6 +12,7 @@ const DopRegistrationPanel = () => {
     const [Information, setInformation] = useState()
 
     const navigate = useNavigate();
+    const [cookies] = useCookies(['token']);
 
     const PostReg = () => {
 
@@ -33,9 +35,14 @@ const DopRegistrationPanel = () => {
 
         useEffect(() => {
 
+            const config = {
+                headers: { 'Authorization': 'JWT ' + cookies.token, 'Content-Type': 'application/json' },
+
+            };
+
             setTimeout(() => {
                 axios
-                    .get(`http://109.174.12.7:8000/isi/`)
+                    .get(`http://109.174.12.7:8000/isi/`, config)
                     .then((response) => {
                         if(response.data.you === "No") {
 

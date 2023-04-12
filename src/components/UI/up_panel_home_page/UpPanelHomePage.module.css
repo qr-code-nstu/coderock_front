@@ -5,3 +5,49 @@
     position: relative;
 
 }
+.logoClient{
+    position: relative;
+    width: 2.50rem;
+    height: 2.63rem;
+    left: 61.8125rem;
+    top: 3.8125rem;
+}
+
+.logoWorkLinner{
+    position: relative;
+    width: 10.06rem;
+    height: 10.03rem;
+    left: 0.2rem;
+    top: 0.2rem;
+
+}
+.button{
+
+    position: relative;
+    top: 2.5rem;
+    left: 85rem;
+
+
+    width: 7.94rem;
+    height: 3rem;
+
+
+    background: rgba(120, 134, 107, 0.8);
+    border: 1px solid #A7A5A5;
+    border-radius: 10px;
+
+@import url("static/fonts/Montserrat/fonts/webfonts/Montserrat.css");
+
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
