@@ -1,0 +1,56 @@
+.orders{
+
+    width: 29.8125rem;
+    height: 1.875rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+    position: relative;
+
+
+
+
+@import url("static/fonts/Montserrat/fonts/webfonts/Montserrat.css");
+
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 20px;
+    text-align: center;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+}
+.categories{
+
+    width: 29.8125rem;
+    height: 1.875rem;
+    margin-left: -5rem;
+    margin-top: 1rem;
+    position: relative;
+
+
+
+
+@import url("static/fonts/Montserrat/fonts/webfonts/Montserrat.css");
+
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+}

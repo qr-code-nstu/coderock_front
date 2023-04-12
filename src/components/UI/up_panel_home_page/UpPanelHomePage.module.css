@@ -3,29 +3,35 @@
     height: 9.5rem;
     border-bottom: 3px solid #78866B;
     position: relative;
-
-}
-.logoClient{
-    position: relative;
-    width: 2.50rem;
-    height: 2.63rem;
-    left: 61.8125rem;
-    top: 3.8125rem;
+    display: flex;
 }
 
 .logoWorkLinner{
     position: relative;
     width: 10.06rem;
     height: 10.03rem;
-    left: 0.2rem;
-    top: 0.2rem;
+    margin-left: 0.2rem;
+    margin-top: -0.4rem;
+    display: flex;
 
 }
-.button{
+
+.logoClient{
+    position: relative;
+    width: 2.50rem;
+    height: 2.63rem;
+    margin-left: 29.25rem;
+    margin-top: 3.8125rem;
+    display: flex;
+}
+
+
+.buttonExit{
 
     position: relative;
-    top: 2.5rem;
-    left: 85rem;
+    margin-top: 3.4rem;
+    margin-left: 3rem;
+    margin-right: 1rem;
 
 
     width: 7.94rem;
@@ -43,6 +49,7 @@
     font-weight: 600;
     font-size: 16px;
     line-height: 20px;
+    text-align: center;
 
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -50,4 +57,97 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.buttonMain{
+    position: relative;
+    margin-top: 6.1875rem;
+    margin-left: 2.2813rem;
+
+
+    width: 10rem;
+    height: 2.75rem;
+
+
+    @import url("static/fonts/Montserrat/fonts/webfonts/Montserrat.css");
+
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+}
+.buttonStock{
+    position: relative;
+    margin-top: 6.1875rem;
+    margin-left: 2.5625rem;
+
+
+    width: 10rem;
+    height: 2.75rem;
+
+
+@import url("static/fonts/Montserrat/fonts/webfonts/Montserrat.css");
+
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.textName{
+    margin-top: 4.3rem;
+    font-size: 20px;
+    margin-left: 1.1187rem;
+    width: 15rem;
+    height: 1.75rem;
+    @import url("static/fonts/Montserrat/fonts/webfonts/Montserrat.css");
+
+
+
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 46px;
+
+    color: #000000;
+
+    webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+}
+
