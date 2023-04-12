@@ -30,7 +30,10 @@ const LoginPanel = () => {
                     setCookie('username', userName, { path: '/' })
                 }
                 else {
-                    console.log("шикос")
+                    if(response.data.client === true)
+                        navigate('/client/home-page')
+                    if(response.data.executor === true)
+                        navigate('/executor/home-page')
                 }
             })
             .catch((e) =>{

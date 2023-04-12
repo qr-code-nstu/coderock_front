@@ -31,8 +31,7 @@ const DopRegistrationPanel = () => {
                 about: Information,
             }, config)
             .then((response) => {
-                console.log(response)
-                //navigate('/login')
+                navigate("/" + pathSignIn + "/home-page")
             })
             .catch((e) =>{
                 console.log(e);
