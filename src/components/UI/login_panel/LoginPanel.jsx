@@ -25,8 +25,7 @@ const LoginPanel = () => {
             .then((response) => {
                 if(response.data.client === false || response.data.executor === false) {
                     navigate('/registration/additional-information')
-                    console.log(response.data)
-                    setCookie('token', response.data.token, { path: '/' })
+                    setCookie('token', response.data.access, { path: '/' })
                 }
                 else {
 
@@ -35,6 +34,7 @@ const LoginPanel = () => {
             .catch((e) =>{
                 console.log(e);
             });
+
     }
 
     return (

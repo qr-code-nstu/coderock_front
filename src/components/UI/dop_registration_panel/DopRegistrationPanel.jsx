@@ -36,25 +36,23 @@ const DopRegistrationPanel = () => {
         useEffect(() => {
 
             const config = {
-                headers: { 'Authorization': 'JWT ' + cookies.token, 'Content-Type': 'application/json' },
+                headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + cookies.token,  },
 
             };
 
-            setTimeout(() => {
-                axios
-                    .get(`http://109.174.12.7:8000/isi/`, config)
-                    .then((response) => {
-                        if(response.data.you === "No") {
-
-                        }
-                        else {
-                            console.log(response.data.you)
-                        }
-                    })
-                    .catch((e) =>{
-                        console.log(e);
-                    });
-            }, 500);
+            axios
+                .get(`http://109.174.12.7:8000/isi/`, config)
+                .then((response) => {
+                    if(response.data.you === "No") {
+                        console.log(response.data.you)
+                    }
+                    else {
+                        console.log(response.data.you)
+                    }
+                })
+                .catch((e) =>{
+                    console.log(e);
+                });
         })
 
     return (
