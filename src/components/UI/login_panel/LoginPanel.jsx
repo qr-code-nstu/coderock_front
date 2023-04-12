@@ -6,7 +6,7 @@ import {useCookies} from "react-cookie";
 
 const LoginPanel = () => {
 
-    const [cookies, setCookie, removeCookie] = useCookies(['token']);
+    const [cookies, setCookie, removeCookie] = useCookies(['token', 'username']);
 
     const navigate = useNavigate();
 
@@ -23,12 +23,14 @@ const LoginPanel = () => {
                 client: client,
             })
             .then((response) => {
+                console.log(response.data.access)
                 if(response.data.client === false || response.data.executor === false) {
                     navigate('/registration/additional-information')
                     setCookie('token', response.data.access, { path: '/' })
+                    setCookie('username', userName, { path: '/' })
                 }
                 else {
-
+                    console.log("шикос")
                 }
             })
             .catch((e) =>{

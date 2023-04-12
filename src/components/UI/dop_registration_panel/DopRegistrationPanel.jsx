@@ -12,20 +12,26 @@ const DopRegistrationPanel = () => {
     const [Information, setInformation] = useState()
 
     const navigate = useNavigate();
-    const [cookies] = useCookies(['token']);
+    const [cookies] = useCookies(['token', 'username']);
+
+    const [pathSignIn, setPathSignIn] = useState('')
 
     const PostReg = () => {
 
-        axios
-            .post(`http://109.174.12.7:8000/client/signin/`, {
-                Name: Name,
-                Surname: Surname,
-                MiddleName: MiddleName,
-                Phone: Phone,
-                Information: Information,
+        const config = {
+            headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + cookies.token},
+        };
 
-            })
+        axios
+            .post("http://109.174.12.7:8000/" + pathSignIn + "/signin/", {
+                first_name: Name,
+                second_name: MiddleName,
+                last_name: Surname,
+                phone: Phone,
+                about: Information,
+            }, config)
             .then((response) => {
+                console.log(response)
                 //navigate('/login')
             })
             .catch((e) =>{
@@ -36,8 +42,7 @@ const DopRegistrationPanel = () => {
         useEffect(() => {
 
             const config = {
-                headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + cookies.token,  },
-
+                headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + cookies.token},
             };
 
             axios
@@ -47,13 +52,13 @@ const DopRegistrationPanel = () => {
                         console.log(response.data.you)
                     }
                     else {
-                        console.log(response.data.you)
+                        setPathSignIn(response.data.you.toLowerCase())
                     }
                 })
                 .catch((e) =>{
                     console.log(e);
                 });
-        })
+        }, [])
 
     return (
         <div className={Styles.panel}>
