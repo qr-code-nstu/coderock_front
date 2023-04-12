@@ -9,13 +9,15 @@ const LoginPanel = () => {
 
     const [userName, setUserName] = useState()
     const [password, setPassword] = useState()
+    const [client, setClient] = useState(true)
 
     const PostLog = () => {
 
         axios
-            .post(`http://127.0.0.1:8000/user/login/`, {
+            .post(`http://109.174.12.7:8000/user/login/`, {
                 username: userName,
                 password: password,
+                client: client,
             })
             .then((response) => {
                 console.log(response);
@@ -23,7 +25,6 @@ const LoginPanel = () => {
             .catch((e) =>{
                 console.log(e);
             });
-
     }
 
     return (
@@ -32,21 +33,35 @@ const LoginPanel = () => {
                 Войти в WorkLinner
             </h2>
 
-            <input className={Styles.inputlogin} onChange={(e) => {setUserName(e.target.value)}}>
+            <input className={Styles.inputlogin} onChange={(e) => {setUserName(e.target.value)}}  placeholder="   Логин или Email">
 
             </input>
 
-            <input className={Styles.inputPass} onChange={(e) => {setPassword(e.target.value)}}>
+            <input className={Styles.inputPass} onChange={(e) => {setPassword(e.target.value)}}   placeholder="   Пароль">
 
             </input>
 
-            <button className={Styles.signIn} onClick={PostLog}>
-
+            <button className={Styles.selectButton} onClick={() =>{setClient(true)}} style={{background: (client ? "#A7A5A5" : "#FFFFFF")}}>
+                Я заказчик
             </button>
 
-            <h3 className={Styles.text3} onClick={() => {navigate('/registration')}}>
+            <button className={Styles.selectButton} onClick={() =>{setClient(false)}} style={{background: (!client ? "#A7A5A5" : "#FFFFFF")}}>
+                Я исполнитель
+            </button>
+
+            <div>
+                <button className={Styles.signIn} onClick={PostLog}>
+                    Войти
+                </button>
+            </div>
+
+            <div className={Styles.text2}>
                 У вас нет аккаунта на WorkLinner?
-            </h3>
+            </div>
+            <button className={Styles.create} onClick={() => {navigate('/registration')}}>
+                Создать аккаунт
+            </button>
+
         </div>
     );
 };
